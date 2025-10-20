@@ -14,6 +14,9 @@ runs:
 
     - name: Install Chrome + fonts
       shell: bash
+      env:
+          GH_TOKEN: ${{ inputs.token }}
+          METRICS_TOKEN: ${{ inputs.token }}
       run: |
         set -euxo pipefail
         sudo apt-get update
